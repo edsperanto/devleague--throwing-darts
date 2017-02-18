@@ -1,7 +1,7 @@
 const isValidArr = require('./isValidArr');
 module.exports = function(arr) {
-	if(arr.length === 0) return 0;
 	if(isValidArr(arr) === false) return isValidArr(arr);
+	if(arr.length === 0) return 0;
 	return arr.reduce((prev, rad, idx) => {
 		if(rad < 5) prev.pts += 10;
 		if(rad >= 5 && rad <= 10) prev.pts += 5;
