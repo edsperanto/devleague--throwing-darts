@@ -20,4 +20,13 @@ describe('Score Throws', _ => {
 	it('should return 0 for empty array', () => {
 		scoreThrows([]).should.deep.equal(0);
 	});
+	it('should reject non-arrays', () => {
+		scoreThrows({}).should.be.false;
+		scoreThrows(666).should.be.false;
+		scoreThrows("random string").should.be.false;
+		scoreThrows(true).should.be.false;
+		scoreThrows(undefined).should.be.false;
+		scoreThrows(null).should.be.false;
+		scoreThrows().should.be.false;
+	})
 });
