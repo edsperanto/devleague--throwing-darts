@@ -5,7 +5,10 @@ const scoreThrows = require('../scoreThrows.js');
 let tests = {
 	1: {run: [1, 5, 11], ans: 15},
 	2: {run: [15, 20, 30], ans: 0},
-	3: {run: [1, 2, 3, 4], ans: 140}
+	3: {run: [1, 2, 3, 4], ans: 140},
+	4: {run: [11, 5, 1], ans: 15},
+	5: {run: [30, 20 ,15], ans: 0},
+	6: {run: [4, 3, 2, 1], ans: 140}
 }
 
 describe('Score Throws', _ => {
