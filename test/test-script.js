@@ -36,5 +36,8 @@ describe('Score Throws', _ => {
 		scoreThrows([undefined]).should.be.false;
 		scoreThrows([null]).should.be.false;
 		scoreThrows([NaN]).should.be.false;
+	});
+	it('should reject arrays containing negative numbers', () => {
+		scoreThrows([-1]).should.be.false;
 	})
 });
