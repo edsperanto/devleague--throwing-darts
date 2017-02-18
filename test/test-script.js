@@ -27,6 +27,14 @@ describe('Score Throws', _ => {
 		scoreThrows(true).should.be.false;
 		scoreThrows(undefined).should.be.false;
 		scoreThrows(null).should.be.false;
-		scoreThrows().should.be.false;
+		scoreThrows(NaN).should.be.false;
+	});
+	it('should reject arrays containing non numbers', () => {
+		scoreThrows([{}]).should.be.false;
+		scoreThrows(["random string"]).should.be.false;
+		scoreThrows([true]).should.be.false;
+		scoreThrows([undefined]).should.be.false;
+		scoreThrows([null]).should.be.false;
+		scoreThrows([NaN]).should.be.false;
 	})
 });
