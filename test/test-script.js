@@ -9,15 +9,9 @@ let tests = {
 }
 
 describe('Score Throws', _ => {
-	it('should calculate points correctly', _ => {
-		/*
+	it('should calculate points correctly', () => {
 		Object.keys(tests).forEach(num => {
 			scoreThrows(tests[num].run).should.deep.equal(tests[num].ans);
 		});
-		*/
-			let test = scoreThrows(tests[1].run);
-			let ans = tests[1].ans;
-			console.log(test);
-			test.should.deep.equal(ans);
 	});
 });
