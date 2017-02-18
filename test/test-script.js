@@ -14,4 +14,7 @@ describe('Score Throws', _ => {
 			scoreThrows(tests[num].run).should.deep.equal(tests[num].ans);
 		});
 	});
+	it('should return 0 for empty array', () => {
+		scoreThrows([]).should.deep.equal(0);
+	});
 });
